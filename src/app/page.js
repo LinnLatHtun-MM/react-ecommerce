@@ -36,8 +36,7 @@ export default function Home() {
         <ProTip />
         <Copyright />
       </Box> */}
-      <CustomAppBar>
-      </CustomAppBar>
+      <CustomAppBar></CustomAppBar>
       <CoverImage></CoverImage>
       {/* <CoverImage></CoverImage>
 

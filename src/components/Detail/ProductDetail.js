@@ -58,35 +58,39 @@ function ProductDetail() {
 
                         {/* Love Icon */}
 
+
+
                         <IconButton onClick={handleLoveClick} sx={{ color: 'red' }}>
                             <ShuffleIcon />
-                            <Typography>
+                            <Typography sx={{ pl: 1 }}>
                                 Compare
                             </Typography>
                         </IconButton>
 
                         {/* Shuffle Icon */}
-                        <IconButton onClick={handleShuffleClick}>
+                        <IconButton onClick={handleShuffleClick} >
                             <FavoriteIcon />
-                            <Typography>
+                            <Typography sx={{ pl: 1 }}>
                                 Add to Wish List
                             </Typography>
                         </IconButton>
+
 
                         {/* {count === 0 && ( */}
                         <Box sx={{
                             display: 'flex',
                             alignItems: 'center',
+                            justifyContent: 'center',
                             mt: 2,
                             padding: 1,
                             border: '1px solid gray',
                             borderRadius: '8px',
-                            background: grey[500]
+                            background: grey[500],
                         }}>
-                            <IconButton >
+                            <IconButton sx={{ color: "white" }} >
                                 <SentimentVeryDissatisfiedIcon />
                             </IconButton>
-                            <span style={{ fontWeight: 'bold' }}>Out of Stock</span>
+                            <Typography style={{ fontWeight: 'bold', color: "white" }}>Out of Stock</Typography>
                         </Box>
                         {/* )} */}
 

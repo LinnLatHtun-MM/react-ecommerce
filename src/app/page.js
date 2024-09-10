@@ -36,13 +36,13 @@ export default function Home() {
         <ProTip />
         <Copyright />
       </Box> */}
-      <CustomAppBar></CustomAppBar>
+      {/* <CustomAppBar></CustomAppBar> */}
       <CoverImage></CoverImage>
       {/* <CoverImage></CoverImage>
 
       <CoverImage></CoverImage> */}
       <BottomDrawer></BottomDrawer>
-      <CustomButtomNavBar></CustomButtomNavBar>
+      {/* <CustomButtomNavBar></CustomButtomNavBar> */}
       <Box sx={{
         p: 4, mb: 4
       }}>

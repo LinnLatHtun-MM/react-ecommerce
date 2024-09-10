@@ -1,3 +1,4 @@
+import GridComponent from '@/components/GridComponent';
 import React from 'react'
 
 function page({ params }) {
@@ -5,11 +6,15 @@ function page({ params }) {
 
     return (
         //batic nak yay ya dl
-        < div >
-            {`this is ${params.id}`}
+        // < div >
+        //     {`this is ${params.id}`}
 
-            this is param {params.id} {params.detail}.
-        </div >
+        //     this is param {params.id} {params.detail}.
+
+
+        // </div >
+
+        <GridComponent></GridComponent>
     );
 }
 

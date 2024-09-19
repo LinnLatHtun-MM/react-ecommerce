@@ -3,8 +3,12 @@ import { useState } from 'react';
 import TextField from '@mui/material/TextField';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
+import Link from 'next/link';
 
-export default function CustomSelectCount() {
+export default function CustomSelectCount({ params }) {
+
+    // const formattedTitle = params.title.replace(/ /g, '-');
+
     const [count, setCount] = useState(0);
     const maxCount = 100;
     const minCount = 0;
@@ -14,6 +18,7 @@ export default function CustomSelectCount() {
     };
 
     const handleAddToCart = () => {
+        //Count +1 in add to card bundle
         alert(`Added ${count} items to the cart!`);
     };
 
@@ -41,7 +46,8 @@ export default function CustomSelectCount() {
                 onClick={handleAddToCart}
                 sx={{ height: '56px', borderRadius: '16px' }} // Match the height of the text field
             >
-                Add to Cart
+                <Link style={{ textDecoration: "none", color: "black" }}
+                    href={`/cart/detail`}>Add to Cart</Link>
             </Button>
         </Box>
     );

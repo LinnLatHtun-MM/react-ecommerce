@@ -1,3 +1,4 @@
+"use client"
 import React from 'react'
 import Grid from '@mui/material/Grid2';
 import Box from '@mui/material/Box';
@@ -11,7 +12,7 @@ import ShuffleIcon from '@mui/icons-material/Shuffle';
 import { lightGreen, grey } from '@mui/material/colors';
 import SentimentVeryDissatisfiedIcon from '@mui/icons-material/SentimentVeryDissatisfied';
 
-function ProductDetail() {
+function ProductDetail({ params }) {
 
     const handleLoveClick = () => {
         alert('Loved!');
@@ -21,15 +22,19 @@ function ProductDetail() {
         alert('Shuffled!');
     };
 
+
+    console.log("White " + params);
+
     return (
 
         <Box sx={{ width: '100%', p: 4 }}>
+
             <Grid container spacing={4}>
 
                 <Grid size={{ xs: 12, md: 4 }}>
                     <Box sx={{ border: "1px solid lightgray" }}>
-                        <Image src="https://demo2.pavothemes.com/freshio/wp-content/uploads/2020/08/40.jpg"
-                            alt="Picture of the author"
+                        <Image src="https://demo2.pavothemes.com/freshio/wp-content/uploads/2020/08/39.jpg"
+                            alt={params.title}
                             width={500}
                             height={500}
                             style={{ width: "100%", height: "auto", objectFit: "cover" }}
@@ -41,10 +46,10 @@ function ProductDetail() {
                     <Box>
                         <Chip label="Out of Stock" sx={{ textAlign: "left" }} />
                         <Typography variant="h4" gutterBottom sx={{ fontWeight: 400, color: 'darkgreen', fontWeight: "bold" }}>
-                            Fantastic Plastic Chair
+                            {params.detail}
                         </Typography>
                         <Typography variant="h4" gutterBottom sx={{ fontWeight: 400, color: lightGreen[500], fontWeight: "bold" }}>
-                            $44
+                            {params.price}
                         </Typography>
                         <Typography variant="h6" gutterBottom sx={{ fontWeight: 400 }}>
                             Color
@@ -52,14 +57,11 @@ function ProductDetail() {
 
                         <CustomCheckBox></CustomCheckBox>
 
-                        <CustomSelectCount></CustomSelectCount>
+                        <CustomSelectCount params={params}></CustomSelectCount>
 
                         <br></br>
 
                         {/* Love Icon */}
-
-
-
                         <IconButton onClick={handleLoveClick} sx={{ color: 'red' }}>
                             <ShuffleIcon />
                             <Typography sx={{ pl: 1 }}>
@@ -93,8 +95,6 @@ function ProductDetail() {
                             <Typography style={{ fontWeight: 'bold', color: "white" }}>Out of Stock</Typography>
                         </Box>
                         {/* )} */}
-
-
                     </Box>
                 </Grid>
 

@@ -5,12 +5,12 @@ import { Box } from '@mui/material'
 import React from 'react'
 
 function page({ params }) {
-    console.log(params.detail);
+    console.log("CustomBreadcrumbs " + params.detail);
 
     return (
         <Box>
             <CustomBreadcrumbs params={params.detail}></CustomBreadcrumbs>
-            <ProductDetail></ProductDetail>
+            <ProductDetail params={params}></ProductDetail>
         </Box>
     )
 }

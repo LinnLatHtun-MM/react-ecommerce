@@ -10,8 +10,7 @@ function handleClick(event) {
     console.info('You clicked a breadcrumb.');
 }
 
-export default function CustomBreadcrumbs({ params }) {
-
+export default function CustomBreadcrumbsAddtoCart({ params }) {
     return (
         <div role="presentation" onClick={handleClick}>
 
@@ -23,9 +22,9 @@ export default function CustomBreadcrumbs({ params }) {
                     <Link
                         underline="hover"
                         color="inherit"
-                        href="/products"
+                        href="/cart"
                     >
-                        Product
+                        cart
                     </Link>
                     <Link
                         underline="hover"

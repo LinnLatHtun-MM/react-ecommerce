@@ -65,26 +65,22 @@ function CustomAppBar(props) {
                     >
                         <MenuIcon />
                     </IconButton>
-                    {/* <Typography
-                        variant="h6"
-                        component="div"
-                        sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
-                    >
-                        MUI
-                    </Typography> */}
+
                     <Image src="https://demo2.pavothemes.com/freshio/wp-content/uploads/2020/08/logo.svg"
                         width={50}
                         height={50}
                         //to left side 
                         style={{ flexGrow: 1 }}>
                     </Image>
+
                     <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
                         {navItems.map((item) => (
-                            <Button key={item} sx={{ color: '#fff' }}>
+                            <Button key={item} sx={{ color: 'green' }}>
                                 {item}
                             </Button>
                         ))}
                     </Box>
+
                     <CustomBadge></CustomBadge>
                 </Toolbar>
 
